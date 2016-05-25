@@ -50,7 +50,7 @@ function blogModuleEmoticons()
 
         td.appendChild(a);
         tr.appendChild(td);
-        
+
         if (!textOnly)
             table.appendChild(tr);
 
@@ -111,8 +111,8 @@ function blogModuleEmoticons()
             for (var element in elements)
                 for (var emoticon in emoticonsTable) {
                     if (textOnly)
-                        var code = "<span class='emoticon'> " 
-                                + emoticonsTable[emoticon][0] 
+                        var code = "<span class='emoticon'> "
+                                + emoticonsTable[emoticon][0]
                                 + "</span>";
                     else
                         var code = "<img class='emoticon' src='"
@@ -172,17 +172,20 @@ function blogModuleCode()
         SyntaxHighlighter.highlight();
     }
 
-    loadExternalfile("css", loadBlogFile("http://alexgorbatchev.com/pub/sh/current/styles/shCore.css"));
-    loadExternalfile("css", loadBlogFile("http://alexgorbatchev.com/pub/sh/current/styles/shThemeRDark.css"));
+//    var origin = "http://alexgorbatchev.com/pub/sh/current/";
+    var origin = "https://agorbatchev.typepad.com/pub/sh/3_0_83/";
 
-    scriptChainLoad(["http://alexgorbatchev.com/pub/sh/current/scripts/shCore.js",
-                        "http://alexgorbatchev.com/pub/sh/current/scripts/shBrushBash.js",
-                        "http://alexgorbatchev.com/pub/sh/current/scripts/shBrushCpp.js",
-                        "http://alexgorbatchev.com/pub/sh/current/scripts/shBrushDiff.js",
-                        "http://alexgorbatchev.com/pub/sh/current/scripts/shBrushJScript.js",
-                        "http://alexgorbatchev.com/pub/sh/current/scripts/shBrushPlain.js",
-                        "http://alexgorbatchev.com/pub/sh/current/scripts/shBrushXml.js",
-                        "http://alexgorbatchev.com/pub/sh/current/scripts/shBrushPython.js"], callback)
+    loadExternalfile("css", loadBlogFile(origin + "styles/shCore.css"));
+    loadExternalfile("css", loadBlogFile(origin + "styles/shThemeRDark.css"));
+
+    scriptChainLoad([origin + "scripts/shCore.js",
+                     origin + "scripts/shBrushBash.js",
+                     origin + "scripts/shBrushCpp.js",
+                     origin + "scripts/shBrushDiff.js",
+                     origin + "scripts/shBrushJScript.js",
+                     origin + "scripts/shBrushPlain.js",
+                     origin + "scripts/shBrushXml.js",
+                     origin + "scripts/shBrushPython.js"], callback)
 }
 
 // Enable math functions rendering.
@@ -190,7 +193,7 @@ function blogModuleMathjax()
 {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    script.src  = loadBlogFile("http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML");
+    script.src  = loadBlogFile("https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML");
 
     var config = 'MathJax.Hub.Config({tex2jax: {inlineMath: [["$", "$"], ["\\\\(", "\\\\)"]], \
                                                 processEscapes: 1}, \
