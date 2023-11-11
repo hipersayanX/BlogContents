@@ -172,11 +172,12 @@ function blogModuleCode()
         SyntaxHighlighter.highlight();
     }
 
-    var origin = "https://bartjolling.github.io/assets/";
+    var origin = "https://webcamoid.github.io/theme/";
 
-    loadExternalfile("css", loadBlogFile(origin + "css/syntaxhighlighter.css"));
+    loadExternalfile("css", loadBlogFile(origin + "css/syntaxhighlighter/syntaxhighlighter.css"));
+    loadExternalfile("css", loadBlogFile(origin + "css/syntaxhighlighter/theme-rdark.css"));
 
-    scriptChainLoad([origin + "js/syntaxhighlighter.js"], callback)
+    scriptChainLoad([origin + "js/syntaxhighlighter/syntaxhighlighter.js"], callback)
 }
 
 // Enable math functions rendering.
