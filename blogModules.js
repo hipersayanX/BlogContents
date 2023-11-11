@@ -172,20 +172,11 @@ function blogModuleCode()
         SyntaxHighlighter.highlight();
     }
 
-//    var origin = "http://alexgorbatchev.com/pub/sh/current/";
-    var origin = "https://agorbatchev.typepad.com/pub/sh/3_0_83/";
+    var origin = "https://bartjolling.github.io/assets/";
 
-    loadExternalfile("css", loadBlogFile(origin + "styles/shCore.css"));
-    loadExternalfile("css", loadBlogFile(origin + "styles/shThemeRDark.css"));
+    loadExternalfile("css", loadBlogFile(origin + "css/syntaxhighlighter.css"));
 
-    scriptChainLoad([origin + "scripts/shCore.js",
-                     origin + "scripts/shBrushBash.js",
-                     origin + "scripts/shBrushCpp.js",
-                     origin + "scripts/shBrushDiff.js",
-                     origin + "scripts/shBrushJScript.js",
-                     origin + "scripts/shBrushPlain.js",
-                     origin + "scripts/shBrushXml.js",
-                     origin + "scripts/shBrushPython.js"], callback)
+    scriptChainLoad([origin + "js/syntaxhighlighter.js"], callback)
 }
 
 // Enable math functions rendering.
